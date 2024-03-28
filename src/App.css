@@ -1,0 +1,33 @@
+:root {
+  --bg-body: #343434;
+  --bg-header: #2b2b2b;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-body);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (min-width: 160em) {
+  html {
+    font-size: 100%;
+  }
+}
