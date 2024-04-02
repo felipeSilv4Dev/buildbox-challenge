@@ -6,7 +6,11 @@ import * as S from "./Header.styled";
 const Header = () => {
   return (
     <S.Header>
-      <img src={logo} srcSet={`${logo2x} 1000w, ${logo3x} 2000w`} alt="Logo" />
+      <S.Image
+        src={logo}
+        srcSet={`${logo2x} 1000w, ${logo3x} 2000w`}
+        alt="Logo"
+      />
     </S.Header>
   );
 };

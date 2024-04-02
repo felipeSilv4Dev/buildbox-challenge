@@ -17,11 +17,12 @@ const Image = ({ src, alt }: ImageProps) => {
     }
     setLoad(false);
   };
+
   return (
-    <S.ImageStyle>
-      {load && <div className="skeleton"></div>}
-      <img onLoad={handleLoad} src={src} alt={alt} />
-    </S.ImageStyle>
+    <S.ImageWrapper>
+      {load && <S.Skeleton></S.Skeleton>}
+      <S.ImageEl onLoad={handleLoad} src={src} alt={alt} />
+    </S.ImageWrapper>
   );
 };
 

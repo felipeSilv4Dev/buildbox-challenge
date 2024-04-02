@@ -7,7 +7,7 @@ import Image from "../../../Image/Image.component";
 
 type PicutreProps = React.ComponentProps<"input"> & {
   error: string | undefined;
-  picture: FileList | undefined;
+  picture: FileList;
   setValue: React.MouseEventHandler<HTMLImageElement>;
 };
 type RefProps = React.ForwardedRef<HTMLInputElement>;
@@ -17,11 +17,11 @@ const Picture = forwardRef(
     return (
       <S.PictureStyle>
         <label htmlFor={props.id}>
-          <div className="image-selected">
+          <S.PictureContainer>
             {(picture === undefined || !picture[0]) && (
-              <div className="image">
+              <S.PictureBox>
                 <Photo />
-              </div>
+              </S.PictureBox>
             )}
             {picture && picture[0] && (
               <Image
@@ -30,16 +30,15 @@ const Picture = forwardRef(
               />
             )}
 
-            <div
-              className="trash"
+            <S.Trash
               onClick={setValue}
               style={{ opacity: picture && picture[0] ? 1 : 0 }}
             >
               <Trash />
-            </div>
-          </div>
+            </S.Trash>
+          </S.PictureContainer>
         </label>
-        {error && <p className="error">{error}</p>}
+        {error && <S.Erro>{error}</S.Erro>}
 
         <input
           ref={ref}

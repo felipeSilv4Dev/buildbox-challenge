@@ -11,5 +11,6 @@ export const deafultTheme = {
     btn: "#5f5f5f",
     btn_active: "#71bb00",
     error: "#FF2400",
+    name: "#7a7a7a",
   },
 };

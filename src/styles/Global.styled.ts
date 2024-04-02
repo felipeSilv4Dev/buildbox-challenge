@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 interface Theme {
   theme: {
     colors: {
@@ -8,7 +8,6 @@ interface Theme {
 }
 
 export const GlobalContainer = createGlobalStyle`
-
 * {
   margin: 0;
   padding: 0;
@@ -20,10 +19,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.main {
-  max-width: 51.6rem;
-  margin: 4rem auto;
-}
 
 html {
   font-size: 62.5%;
@@ -33,10 +28,6 @@ img {
   max-width: 100%;
 }
 
-.error {
-    font-size: 1.2rem;
-    color: ${({ theme }) => theme.colors.error};
-  }
 
 @media (min-width: 112.5em) {
   html {
@@ -55,9 +46,16 @@ img {
     font-size: 50%;
   }
 
-  .main {
+
+}
+`;
+
+export const MainBox = styled.div`
+  max-width: 51.6rem;
+  margin: 4rem auto;
+
+  @media (max-width: 48em) {
     margin-top: 5rem;
     max-width: 90%;
   }
-}
 `;
