@@ -17,6 +17,9 @@ export const GlobalContainer = createGlobalStyle`
 body {
   background-color:  ${({ theme }: Theme) => theme.colors.body_bg};
   font-family: "Roboto", sans-serif;
+	display: flex;
+	flex-direction: column;
+	min-height: 130vh;
 }
 
 
@@ -53,6 +56,7 @@ img {
 export const MainBox = styled.div`
   max-width: 51.6rem;
   margin: 4rem auto;
+  flex: 1;
 
   @media (max-width: 48em) {
     margin-top: 5rem;
